@@ -1,3 +1,11 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: rgb(249, 233, 146);
+}
 header {
   background-color: gold;
   margin: 0;
@@ -6,38 +14,18 @@ header {
   height: 8em;
 }
 
-body {
-  margin: 0;
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
   box-sizing: border-box;
-  padding: 0;
-  background-color: rgb(249, 233, 146);
 }
 
-.row {
-  display: flex;
-  flex-direction: row;
-}
-
-#year {
-  width: 15em;
-  height: 15em;
-  border-radius: 50%;
-  background-color: gold;
-  margin: 2em;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
-
-#year h1,
-#year h2 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-#month {
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 table {
