@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <header>
+      <h1>Pellets förbrukning</h1>
+    </header>
+    <section id="year"></section>
+    <section>
+      <table id="month">
+        <tr>
+          <th>Månad</th>
+          <th>Säckar</th>
+        </tr>
+      </table>
+    </section>
+
+    <section>
+      <table id="alldata">
+        <tr>
+          <th>Datum</th>
+          <th>Säckar</th>
+        </tr>
+      </table>
+    </section>
+
+    <section>
+      <form id="form">
+        <label for="date">Datum:</label><br />
+        <input type="date" id="date" name="date" /><br />
+        <label for="amount">Antal säckar:</label><br />
+        <input
+          type="text"
+          id="amount"
+          name="amount"
+          placeholder="Antal"
+        /><br /><br />
+        <input type="submit" value="Submit" />
+      </form>
+    </section>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
