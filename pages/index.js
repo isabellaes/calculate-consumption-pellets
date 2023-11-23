@@ -1,7 +1,25 @@
 import Head from "next/head";
 import styles from "../styles/Home.module.css";
+import handler from "./api/get-data";
 
 export default function Home() {
+  const data = handler();
+
+  const years = data.map((element) => element.date.substring(0, 4));
+  const unique = [new Set(years)];
+  const values = [];
+  unique[0].forEach((entry) => values.push(entry));
+
+  const amount = data.filter(
+    (element) => element.date.substring(0, 4) === values[0]
+  );
+
+  const amountSum = amount.map((element) => element.amount);
+  let sum = 0;
+  for (let index = 0; index < amountSum.length; index++) {
+    let num = Number(amountSum[index]);
+    sum = sum + num;
+  }
   return (
     <div className={styles.container}>
       <Head>
@@ -13,7 +31,10 @@ export default function Home() {
         <header>
           <h1>Pellets förbrukning</h1>
         </header>
-        <section id="year"></section>
+        <section id="year">
+          <h1>{values[0]}</h1>
+          <p>{sum}</p>
+        </section>
         <section>
           <table id="month">
             <tr>
